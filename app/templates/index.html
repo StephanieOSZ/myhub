@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        {% block head %}
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        {% block styles %}
+            <!-- Bootstrap CSS -->
+            {{ bootstrap.load_css() }}
+            <link rel="stylesheet" href="./static/css/style.css" />
+            <link rel='stylesheet' href="./static/fontawesome/css/all.min.css">
+        {% endblock %}
+        <title>Stephanie Russo | Portfolio</title>
+        {% endblock %}
+    </head>
+    <body>
+		<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow d-block d-sm-none">
+			<button class="navbar-toggler d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+		</header>         
+        <div class="container-fluid">
+            <div class="row">
+              	<nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block sidebar collapse">
+					<button class="navbar-toggler d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="row logo">
+						<img src="{{url_for('static', filename='./image/avatar.png')}}" class="rounded-circle main-photo" >
+					</div>
+					<div class="row">
+						&nbsp;
+						<h5 class="owner_name text-center">Stephanie Russo</h5>
+						&nbsp;&nbsp;
+						<p class="owner_describe text-center">Engenheira da Computação</p>
+						<p class="owner_describe text-center">Desenvolvedora de Sistemas</p>
+						<p class="owner_describe text-center">Estudante de Machine Learning</p>
+						<p class="owner_describe text-center">São José dos Campos - SP</p>
+						<div class="justify-content-between text-center">
+							<a href="https://pt-br.facebook.com/stephanie.souza.71/" target="_blank"><i class="fab fa-facebook text-white p-3 owner-icon"></i></a>
+							<a href="https://www.instagram.com/stephanie_tek/" target="_blank"><i class="fab fa-instagram text-white p-3 owner-icon"></i></a>
+							<a href="https://github.com/StephanieOSZ" target="_blank"><i class="fab fa-github text-white p-3 owner-icon" ></i></a>
+						</div>
+					</div>
+              	</nav>
+				<div class="d-flex justify-content-between main-content flex-wrap flex-md-nowrap align-items-center pt-3 pb-2">
+					<div class="container custom-padding" id="particles-js">
+						<a href="#projectDev">
+							<div class="card">
+								<div class="content">
+									<h2><i class="fa fa-code"></i></h2>
+									<h3>Desenvolvimento</h3>
+									<p>Meus projetos em desenvolvimento de apps</p>
+								</div>
+							</div>
+						</a>
+						<a href="#projectMl">
+							<div class="card">
+								<div class="content">
+									<h2><i class="fa fa-microchip"></i></h2>
+									<h3>Machine Learning</h3>
+									<p>Meus projetos de machine learning</p>
+								</div>
+							</div>
+						</a>
+						<a href="#projectOthers">
+							<div class="card">
+								<div class="content">
+									<h2><i class="fa fa-terminal"></i></h2>
+									<h3>Outros Projetos</h3>
+									<p>Libs, scripts entre outros</p>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div id="projectDev" class="d-flex flex-wrap flex-md-nowrap bg-white align-items-center pt-3 pb-2 ">
+					<div class="custom-padding">
+						<h2>Desenvolvimento</h2>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+					</div>
+				</div>
+				<div id="projectMl" class="d-flex flex-wrap flex-md-nowrap bg-white align-items-center pt-3 pb-2 ">
+					<div class="custom-padding">
+						<h2>Machine Learning</h2>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+					</div>
+				</div>
+				<div id="projectOthers" class="d-flex flex-wrap flex-md-nowrap bg-white align-items-center pt-3 pb-2 ">
+					<div class="custom-padding">
+						<h2>Outros Projetos</h2>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+					</div>
+				</div>
+            </div>
+        </div>
+          
+        {% block scripts %}
+            <!-- Optional JavaScript -->
+            {{ bootstrap.load_js() }}
+			<script refer src="{{url_for('static', filename='./js/vanilla-tilt.min.js')}}"></script>
+            <script refer src="{{url_for('static', filename='./js/main.js')}}"></script>
+			<script refer src="{{url_for('static', filename='./js/particles.js')}}"></script>
+			<script refer src="{{url_for('static', filename='./js/app.js')}}"></script>
+        {% endblock %}
+    </body>
+</html>
